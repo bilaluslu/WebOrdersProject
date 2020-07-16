@@ -42,6 +42,7 @@ public class OrderTests extends TestBase{
         orderPage.clickToCalculate();
         // then user should verify that total 216 is displayed
         Assert.assertEquals(orderPage.getTotal(),"216","Total is not matching");
+        Thread.sleep(3000);
         // when user enters address information:
         orderPage.enterCustomerName("Test User");
         orderPage.enterStreet("5th Ave");
@@ -49,13 +50,14 @@ public class OrderTests extends TestBase{
         orderPage.enterState("New York");
         orderPage.enterZip("20025");
         // and user enters payment information
+        Thread.sleep(3000);
         orderPage.selectCard("Visa");
         orderPage.cardNumber("12345667898");
         orderPage.expirationDate("04/25");
-
+        Thread.sleep(3000);
         orderPage.clickOnProcessButton();
         orderPage.clickOnViewAllOrders();
-        Thread.sleep(5000);
+        Thread.sleep(3000);
 
     }
 
